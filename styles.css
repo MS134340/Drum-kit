@@ -17,45 +17,45 @@ footer {
 }
 
 .w {
-  background-image: URL('images/tom1.png');
+  background-image: URL('tom1.png');
   background-size: 100%;
   background-position: center;
 }
 
 .a {
 
-  background-image: URL('images/tom2.png');
+  background-image: URL('tom2.png');
   background-size: 100%;
   background-position: center;
 }
 
 .s {
 
-  background-image: URL('images/tom3.png');
+  background-image: URL('tom3.png');
   background-size: 100%;
   background-position: center;
 }
 
 .d {
 
-  background-image: URL('images/tom4.png');
+  background-image: URL('tom4.png');
 }
 
 .j {
 
-  background-image: URL('images/snare.png');
+  background-image: URL('snare.png');
   
 }
 
 .k {
 
-  background-image: URL('images/crash.png');
+  background-image: URL('crash.png');
   
 }
 
 .l {
 
-  background-image: URL('images/kick.png');
+  background-image: URL('kick.png');
   
 }
 

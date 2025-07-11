@@ -41,7 +41,7 @@ Simple, fun, and a great beginner project to learn about DOM manipulation and we
     cd Drum-kit
     Open the index.html file in your browser.
 Recommended: Use the Live Server extension in VS Code for automatic reload on save.
-
+---
 ##📁 Project Structure
    Drum-kit/
    ├── sounds/          # Drum sound MP3 files
@@ -49,8 +49,8 @@ Recommended: Use the Live Server extension in VS Code for automatic reload on sa
    ├── index.html       # Main webpage
    ├── style.css        # Styling
    └── script.js        # JavaScript functionality
-   
+---
 ##🧑‍💻 Built With
-HTML5
-CSS3
-JavaScript (ES6)
+- HTML5
+- CSS3
+- JavaScript (ES6)

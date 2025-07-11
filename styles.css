@@ -1,102 +1,206 @@
-body {
-  text-align: center;
-  background-color: #283149;
+/* ---------- GLOBAL ---------- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #fff;
+    transition: background 0.5s ease, color 0.5s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-h1 {
-  font-size: 5rem;
-  color: #DBEDF3;
-  font-family: "Arvo", cursive;
-  text-shadow: 3px 0 #DA0463;
-
+/* Light Mode */
+body.light-mode {
+    background: linear-gradient(135deg, #f2eaff, #d2f0ff);
+    color: #333;
 }
 
-footer {
-  color: #DBEDF3;
-  font-family: sans-serif;
+/* ---------- HEADER ---------- */
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
 }
 
-.w {
-  background-image: URL('tom1.png');
-  background-size: 100%;
-  background-position: center;
+.subheading {
+    font-size: 1.2rem;
+    color: #ddd;
 }
 
-.a {
-
-  background-image: URL('tom2.png');
-  background-size: 100%;
-  background-position: center;
+body.light-mode header h1,
+body.light-mode .subheading {
+    color: #333;
 }
 
-.s {
-
-  background-image: URL('tom3.png');
-  background-size: 100%;
-  background-position: center;
+/* ---------- CONTROL BUTTONS ---------- */
+header .btn {
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-weight: 500;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-.d {
-
-  background-image: URL('tom4.png');
+header .btn:hover {
+    transform: translateY(-2px);
 }
 
-.j {
-
-  background-image: URL('snare.png');
-  
+header .btn:active {
+    transform: scale(0.95);
 }
 
-.k {
-
-  background-image: URL('crash.png');
-  
+body.light-mode header .btn.btn-outline-light {
+    color: #333;
+    border-color: #333;
 }
 
-.l {
+body.light-mode header .btn.btn-outline-light:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
-  background-image: URL('kick.png');
-  
+/* ---------- DRUM PADS ---------- */
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .set {
-  margin: 10% auto;
-}
-
-.pressed {
-  transform: scale(0.9); 
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); 
-  transition: transform 0.1s, box-shadow 0.1s; 
-}
-
-.game-over {
-  background-color: red;
-  opacity: 0.8;
-}
-
-.pressed {
-  box-shadow: 0 3px 4px 0 #DBEDF3;
-  opacity: 0.5;
-}
-
-.red {
-  color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
 .drum {
-  outline: none;
-  border: 10px solid #404B69;
-  font-size: 5rem;
-  font-family: 'Arvo', cursive;
-  line-height: 2;
-  font-weight: 900;
-  color: #DA0463;
-  text-shadow: 3px 0 #DBEDF3;
-  border-radius: 15px;
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  text-align: center;
-  margin: 10px;
-  background-color: white;
+    font-size: 1.2rem;
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+    border: none;
+    background: #444;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none; 
+}
+
+.drum img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease;
+}
+
+.drum:hover {
+    background: linear-gradient(135deg, #5c5c5c, #6e6e6e);
+    transform: translateY(-3px);
+}
+
+.drum:active,
+.drum.pressed {
+    background: linear-gradient(135deg, #ffffff, #dddddd);
+    color: #333;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transform: scale(0.9);
+}
+
+/* Light mode drum */
+body.light-mode .drum {
+    background-color: #f2eaff;
+    color: #333;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px #ccc;
+}
+
+body.light-mode .drum:hover {
+    background-color: #e6ddff;
+}
+
+body.light-mode .drum.pressed {
+    background-color: #d8ccff;
+    color: #222;
+    box-shadow: 0 0 20px rgba(50, 50, 50, 0.4);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+body.light-mode footer {
+    color: #555;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .drum {
+        width: 90px;
+        height: 90px;
+    }
+
+    .drum img {
+        width: 40px;
+        height: 40px;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    .subheading {
+        font-size: 1rem;
+    }
+
+    header .d-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #volume-slider {
+        width: 150px;
+    }
+}
+
+/* ---------- SMALLER HEADER BUTTONS ---------- */
+header .btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 30px;
+}
+
+/* ---------- RECORDING INDICATOR ---------- */
+.record-indicator {
+    font-weight: bold;
+    color: #ff4d4d;
+    animation: blink 1s infinite;
+    font-size: 1rem;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.4; }
+}
+
+body.light-mode .record-indicator {
+    color: #cc0000;
 }

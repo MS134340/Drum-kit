@@ -1,31 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Drum Kit</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">            
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-       
 <body>
 
-  <h1 id="title">Drum 🥁 Kit</h1>
-  <div class="set">
-    <button class="w drum">w</button>
-    <button class="a drum">a</button>
-    <button class="s drum">s</button>
-    <button class="d drum">d</button>
-    <button class="j drum">j</button>
-    <button class="k drum">k</button>
-    <button class="l drum">l</button>
-  </div>
+<!-- Header -->
+<header class="text-center py-4">
+    <h1>Drum Kit🥁</h1>
+    <p class="subheading mb-4">Tap the pads or press the keys to play your rhythm!</p>
 
+    <!-- Control Buttons -->
+    <div class="d-flex justify-content-center flex-wrap gap-2">
+        <button id="theme-toggle" class="btn btn-outline-light">☀️ Light Mode</button>
+        <button id="record-btn" class="btn btn-outline-danger">🔴 Record</button>
+        <button id="play-btn" class="btn btn-outline-success" disabled>▶️ Play</button>
+        <button id="pause-btn" class="btn btn-outline-secondary d-none">⏸️ Pause</button>
+        <button id="clear-btn" class="btn btn-outline-warning">❌ Clear</button>
 
-  <footer>
-    Made with ❤️ in India.
-  </footer>
-  <script src="index.js" charset="utf-8"></script>
+        <!-- Volume Controls -->
+        <div class="d-flex align-items-center ms-3">
+            <label for="volume-slider" class="form-label mb-0 me-2">Volume</label>
+            <input type="range" id="volume-slider" min="0" max="100" value="100" class="form-range mx-2" title="Adjust volume">
+            <button id="mute-btn" class="btn btn-outline-info">🔇 Mute</button>
+        </div>
+    </div>
+
+    <!-- Recording Indicator -->
+    <div class="mt-2">
+        <span id="record-indicator" class="record-indicator d-none">🔴 Recording...</span>
+    </div>
+</header>
+
+<!-- Drum Pads -->
+<main class="py-4">
+    <div class="set d-flex flex-wrap justify-content-center gap-4">
+        <button class="drum" id="w"><img src="images/tom-1.png" alt="Tom 1"><br>W</button>
+        <button class="drum" id="a"><img src="images/tom-2.png" alt="Tom 2"><br>A</button>
+        <button class="drum" id="s"><img src="images/tom-3.png" alt="Tom 3"><br>S</button>
+        <button class="drum" id="d"><img src="images/tom-4.png" alt="Tom 4"><br>D</button>
+        <button class="drum" id="j"><img src="images/snare.png" alt="Snare"><br>J</button>
+        <button class="drum" id="k"><img src="images/crash.png" alt="Crash"><br>K</button>
+        <button class="drum" id="l"><img src="images/kick-bass.png" alt="Kick-Bass"><br>L</button>
+        <button class="drum" id="h"><img src="images/hithat.png" alt="Hi-hat"><br>H</button>
+        <button class="drum" id="c"><img src="images/clap.png" alt="Clap"><br>C</button>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="text-center py-4">
+    <p>© 2023 Drum Kit | Built with ❤️ by MS134340</p>
+</footer>
+
+<script src="index.js"></script>
 </body>
-
 </html>

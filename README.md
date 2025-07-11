@@ -43,7 +43,7 @@ Simple, fun, and a great beginner project to learn about DOM manipulation and we
 Recommended: Use the Live Server extension in VS Code for automatic reload on save.
 
 ---
-##🧑‍💻 Built With
+## 🧑‍💻 Built With
 - HTML5
 - CSS3
 - JavaScript (ES6)
